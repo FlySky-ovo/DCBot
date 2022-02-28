@@ -1,12 +1,15 @@
+from json import load
+from os import listdir, getenv
 from discord import Intents
 from discord.ext import commands
-import json
-import os
+from dotenv import load_dotenv
 
-intent = Intents.all()     # 授權
+intent = Intents.all()
 
 with open('cfg.json', 'r') as jcfg:
-	cfg = json.load(jcfg)
+	cfg = load(jcfg)
+
+load_dotenv()
 
 client = commands.Bot(command_prefix=cfg['prefix'])
 
@@ -34,9 +37,9 @@ async def unload(ctx, ext):
 	client.unload_extension(f'cog.{ext}')
 	await msg.edit(content='Unloaded!')
 
-for filename in os.listdir('./cog'):
+for filename in listdir('./cog'):
 	if filename.endswith('.py'):
 		client.load_extension(f'cog.{filename[:-3]}')
 
 if __name__ == '__main__':
-	client.run(cfg['token'])
+	client.run(getenv('token'))
