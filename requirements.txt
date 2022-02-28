@@ -1,2 +1,3 @@
 pip
 pycord
+python-dotenv
