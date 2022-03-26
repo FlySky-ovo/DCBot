@@ -1,3 +1,4 @@
+print('Starting bot...')
 from json import load
 from os import listdir, getenv
 from discord import Intents
