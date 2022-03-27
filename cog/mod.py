@@ -7,3 +7,6 @@ class Mod(Cog_Extension):
 		ctx.purge(count)
 		await ctx.send(f'Done.')
 		print('mod.purge >> done')
+
+def setup(client):
+	client.add_cog(Mod(client))
