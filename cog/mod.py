@@ -2,7 +2,7 @@ from core.classes import Cog_Extension
 from discord.ext.commands import command
 
 class Mod(Cog_Extension):
-	@command
+	@command()
 	async def purge(ctx, count):
 		ctx.purge(count)
 		await ctx.send(f'Done.')
