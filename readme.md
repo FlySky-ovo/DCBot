@@ -10,7 +10,7 @@
 
 ***
 
-<h2 align="center"><strong>授權 // Licenses</strong></h2>
+<h2 align="center"><strong>授權　//　Licenses</strong></h2>
 
 <p align="center">https://github.com/FlySky-ovo/DCBot/blob/main/License.md</p>
 
