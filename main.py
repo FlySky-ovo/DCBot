@@ -1,10 +1,16 @@
-print('Starting bot...')
 from json import load
-from os import listdir, getenv
+from os import getenv, listdir
 from discord import Intents
 from discord.ext import commands
 from dotenv import load_dotenv
-from clear_console import clear_console
+from function.clear_console import clear_console
+from function.time import now_time
+
+clear_console()
+
+now_time()
+
+print('Starting bot...')
 
 intent = Intents.all()
 
@@ -19,7 +25,7 @@ client.remove_command('help')
 
 @client.event
 async def on_ready():
-	clear_console()
+	now_time()
 	print('Ready!')
 
 @client.command()
