@@ -11,7 +11,7 @@ class Main(Cog_Extension):
 
 	@command()
 	async def help(self, ctx):
-		emb = Embed(title = '幫助區 // 飛翔小助手')
+		emb = Embed(title = '幫助區　//　飛翔小助手')
 		emb.add_field(name='prefix `^`', value='> 前綴', inline=True)
 		emb.add_field(name='help', value='> 叫出這個沒啥用的幫助區', inline=True)
 		emb.add_field(name='ping', value='> 查看機器人延遲', inline=True)
