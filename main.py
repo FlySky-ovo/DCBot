@@ -4,6 +4,7 @@ from os import listdir, getenv
 from discord import Intents
 from discord.ext import commands
 from dotenv import load_dotenv
+from clear_console import clear_console
 
 intent = Intents.all()
 
@@ -18,6 +19,7 @@ client.remove_command('help')
 
 @client.event
 async def on_ready():
+	clear_console()
 	print('Ready!')
 
 @client.command()
