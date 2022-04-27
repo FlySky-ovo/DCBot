@@ -1,5 +1,5 @@
+import discord
 from core.classes import Cog_Extension
-from discord.ext.commands import command, has_permissions
 from function.time import now_time
 
 class Mod(Cog_Extension):
