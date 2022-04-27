@@ -8,7 +8,7 @@ class Main(Cog_Extension):
 
 	@command()
 	async def ping(self, ctx):
-		await ctx.send(f'{round(self.client.latency*1000)} ms')
+		await ctx.respond(f'{round(self.client.latency*1000)} ms')
 
 	@command()
 	async def help(self, ctx):
