@@ -9,7 +9,6 @@ from function.time import now_time
 clear_console()
 
 now_time()
-
 print('Starting bot...')
 
 intent = Intents.all()
@@ -30,21 +29,36 @@ async def on_ready():
 
 @client.command()
 async def load(ctx, ext):
-	msg = await ctx.send('Loading...')
-	client.load_extension(f'cog.{ext}')
-	await msg.edit(content='Loaded Sucessful')
+	if ctx.author.message.id == '745187705075531778':
+		msg = await ctx.send('Loading...')
+		client.load_extension(f'cog.{ext}')
+		await msg.edit(content='Loaded Sucessful')
+		now_time()
+		print('load')
+	else:
+		await ctx.send('請勿操作核心！')
 
 @client.command()
 async def reload(ctx, ext):
-	msg = await ctx.send('Reloading...')
-	client.reload_extension(f'cog.{ext}')
-	await msg.edit(content='Reloaded Sucessful')
+	if ctx.message.author.id == '745187705075531778':
+		msg = await ctx.send('Reloading...')
+		client.reload_extension(f'cog.{ext}')
+		await msg.edit(content='Reloaded Sucessful')
+		now_time()
+		print('reload')
+	else:
+		await ctx.send('請勿操作核心！')
 
 @client.command()
 async def unload(ctx, ext):
-	msg = await ctx.send('Unloading...')
-	client.unload_extension(f'cog.{ext}')
-	await msg.edit(content='Unloaded!')
+	if ctx.message.author.id == '745187705075531778':
+		msg = await ctx.send('Unloading...')
+		client.unload_extension(f'cog.{ext}')
+		await msg.edit(content='Unloaded!')
+		now_time()
+		print('unload')
+	else:
+		await ctx.send('請勿操作核心！')
 
 for filename in listdir('./cog'):
 	if filename.endswith('.py'):
