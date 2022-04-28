@@ -27,7 +27,7 @@ client.remove_command('help')
 async def on_ready():
 	now_time()
 	print('Ready!')
-	change_presence()
+#	change_presence()
 
 
 @client.command()
