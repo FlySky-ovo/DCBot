@@ -6,11 +6,11 @@ from function.time import now_time
 
 class Main(Cog_Extension):
 
-	@command()
+	@command
 	async def ping(self, ctx):
 		await ctx.respond(f'{round(self.client.latency*1000)} ms')
 
-	@command()
+	@command
 	async def help(self, ctx):
 		emb = Embed(title = '幫助區　//　飛翔小助手')
 		emb.add_field(name='prefix `^`', value='> 前綴', inline=False)

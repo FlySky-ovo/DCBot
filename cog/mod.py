@@ -4,14 +4,14 @@ from function.time import now_time
 
 class Mod(Cog_Extension):
 
-	@command()
+	@command
 	async def say(self, ctx, *, msg):
 		await ctx.message.delete()
 		await ctx.repond(msg)
 		now_time()
 		print('mod.say')
 
-	@command()
+	@command
 	@has_permissions(administrator=True)
 	async def purge(self, ctx, count: int):
 		await ctx.channel.purge(limit=count+1)
@@ -19,7 +19,7 @@ class Mod(Cog_Extension):
 		now_time()
 		print('mod.purge')
 
-	@command()
+	@command
 	async def check_per(self, ctx):
 		if ctx.author.guild_permissions.administrator:
 			await ctx.respond(f'你有管理員權限，可以操作大部分的指令！')
