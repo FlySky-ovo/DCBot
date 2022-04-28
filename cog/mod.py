@@ -1,4 +1,4 @@
-import discord
+from discord.ext.commands import command, has_permissions
 from core.classes import Cog_Extension
 from function.time import now_time
 
