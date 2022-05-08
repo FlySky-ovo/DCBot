@@ -4,7 +4,6 @@ from discord import Intents
 from discord.ext import commands
 from dotenv import load_dotenv
 from function.clear_console import clear_console
-from function.statue import change_presence
 from function.time import now_time
 
 clear_console()
@@ -27,7 +26,6 @@ client.remove_command('help')
 async def on_ready():
 	now_time()
 	print('Ready!')
-#	change_presence()
 
 
 @client.command()
