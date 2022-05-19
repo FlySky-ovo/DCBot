@@ -10,13 +10,18 @@ class Purge(Cog_Ext):
 		guild_ids=[894926051254362133]
 	)
 
-	@has_permissions(administrator=True)
-
 	async def purge(self, ctx, count: int):
-		await ctx.channel.purge(limit=count+1)
-		await ctx.send(f'Done')
-		now_time()
-		print('>|> Purge\n>|>Admin')
+
+		if ctx.author.guild_permissions.administrator:
+			await ctx.channel.purge(limit = count + 1)
+			await ctx.send(f'Done')
+			now_time()
+			print('>|> Purge\n>|>Admin')
+
+		else:
+			await ctx.send(f'你沒有權限')
+			now_time()
+			print('>|> Purge\n>|>Normal')
 
 def setup(client):
 	client.add_cog(Purge(client))
