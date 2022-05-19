@@ -69,6 +69,7 @@ async def on_error(ctx, error):
 for filename in listdir('./cog'):
 	if filename.endswith('.py'):
 		client.load_extension(f'cog.{filename[:-3]}')
+		print(f'Loading {filename[:-3]}')
 
 if __name__ == '__main__':
 	client.run(getenv('token'))
