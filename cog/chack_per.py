@@ -1,13 +1,13 @@
 from discord.ext.commands import command, has_permissions
-from core.classes import Cog_Extension
+from core.classes import Cog_Ext
 from function.time import now_time
 
-class Mod(Cog_Extension):
+class CheckPer(Cog_Ext):
 
 	@command
 	async def say(self, ctx, *, msg):
 		await ctx.message.delete()
-		await ctx.repond(msg)
+		await ctx.send(msg)
 		now_time()
 		print('mod.say')
 
@@ -22,11 +22,11 @@ class Mod(Cog_Extension):
 	@command
 	async def check_per(self, ctx):
 		if ctx.author.guild_permissions.administrator:
-			await ctx.respond(f'你有管理員權限，可以操作大部分的指令！')
+			await ctx.send(f'你有管理員權限，可以操作大部分的指令！')
 		else:
-			await ctx.respond(f'你沒有管理員權限，只能使用安全的指令。')
+			await ctx.send(f'你沒有管理員權限，只能使用安全的指令。')
 		now_time()
 		print('mod.check_per')
 
 def setup(client):
-	client.add_cog(Mod(client))
+	client.add_cog(CheckPer(client))
