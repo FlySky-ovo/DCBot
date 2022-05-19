@@ -18,7 +18,7 @@ with open('cfg.json', 'r') as jcfg:
 
 load_dotenv()
 
-client = commands.Bot(command_prefix=cfg['prefix'])
+client = commands.Bot(command_prefix=cfg['prefix'], intents=intent)
 
 client.remove_command('help')
 
