@@ -16,7 +16,7 @@ class Purge(Cog_Ext):
 		await ctx.channel.purge(limit=count+1)
 		await ctx.send(f'Done')
 		now_time()
-		print('mod.purge')
+		print('>|> Purge\n>|>Admin')
 
 def setup(client):
 	client.add_cog(Purge(client))

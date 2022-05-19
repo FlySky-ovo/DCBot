@@ -35,7 +35,7 @@ async def load(ctx, ext):
 		client.load_extension(f'cog.{ext}')
 		await msg.edit(content='Loaded Sucessful')
 		now_time()
-		print('load')
+		print('>|> Load')
 	else:
 		await ctx.send('請勿操作核心！')
 
@@ -46,7 +46,7 @@ async def reload(ctx, ext):
 		client.reload_extension(f'cog.{ext}')
 		await msg.edit(content='Reloaded Sucessful')
 		now_time()
-		print('reload')
+		print('>|> Reload')
 	else:
 		await ctx.send('請勿操作核心！')
 
@@ -57,7 +57,7 @@ async def unload(ctx, ext):
 		client.unload_extension(f'cog.{ext}')
 		await msg.edit(content='Unloaded!')
 		now_time()
-		print('unload')
+		print('>|> Unload')
 	else:
 		await ctx.send('請勿操作核心！')
 

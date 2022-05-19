@@ -19,7 +19,7 @@ class CheckPer(Cog_Ext):
 			await ctx.send(f'你沒有管理員權限，只能使用安全的指令。')
 
 		now_time()
-		print('mod.check_per')
+		print('>|> Check Permission')
 
 def setup(client):
 	client.add_cog(CheckPer(client))

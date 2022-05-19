@@ -14,7 +14,7 @@ class Say(Cog_Ext):
 		await ctx.message.delete()
 		await ctx.send(msg)
 		now_time()
-		print('mod.say')
+		print('>|> Say')
 
 def setup(client):
 	client.add_cog(Say(client))

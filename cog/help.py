@@ -30,7 +30,7 @@ class Help(Cog_Ext):
 
 		await ctx.send(embed = emb)
 		now_time()
-		print('main.help')
+		print('>|> Help')
 
 def setup(client):
 	client.add_cog(Help(client))
