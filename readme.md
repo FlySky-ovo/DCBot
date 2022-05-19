@@ -6,8 +6,8 @@
 <h2 align="center"><strong>環境　//　Environment</strong></h2>
 
 - [discord-py-slash-command](https://dpyslash.readthedocs.io/)
-- [pycord](https://pycord.dev/)
-- [python 3.9.13](https://www.python.org/downloads/release/python-3913/)
+- [Pycord](https://pycord.dev/)
+- [Python 3.9.13](https://www.python.org/downloads/release/python-3913/)
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
 
 ***
