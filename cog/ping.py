@@ -5,7 +5,12 @@ from function.time import now_time
 
 class Ping(Cog_Ext):
 
-	@command(name='ping', description='查看機器人延遲')
+	@command(
+		name='ping',
+		description='查看機器人延遲',
+		guild_ids=[894926051254362133]
+	)
+
 	async def ping(self, ctx):
 		await ctx.send(f'{round(self.client.latency*1000)} ms')
 		now_time()

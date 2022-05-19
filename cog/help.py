@@ -5,7 +5,12 @@ from function.time import now_time
 
 class Help(Cog_Ext):
 
-	@command(name='help', description='叫出沒啥用的幫助區')
+	@command(
+		name='help',
+		description='叫出沒啥用的幫助區',
+		guild_ids=[894926051254362133]
+	)
+
 	async def help(self, ctx):
 		emb = Embed(title = '幫助區　//　飛翔小助手')
 		emb.add_field(name='prefix `^`', value='> 前綴', inline=False)
