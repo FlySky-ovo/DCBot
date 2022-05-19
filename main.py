@@ -25,8 +25,7 @@ client.remove_command('help')
 @client.event
 async def on_ready():
 	now_time()
-	print('Ready!')
-
+	print('>|> Bot is Ready!')
 
 @client.command()
 async def load(ctx, ext):
@@ -69,7 +68,7 @@ async def on_error(ctx, error):
 for filename in listdir('./cog'):
 	if filename.endswith('.py'):
 		client.load_extension(f'cog.{filename[:-3]}')
-		print(f'Loading {filename[:-3]}')
+		print(f'>|> Loading {filename[:-3]}')
 
 if __name__ == '__main__':
 	client.run(getenv('token'))
