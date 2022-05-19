@@ -30,7 +30,7 @@ async def on_ready():
 
 @client.command()
 async def load(ctx, ext):
-	if ctx.author.message.id == '745187705075531778':
+	if ctx.author.id == 745187705075531778:
 		msg = await ctx.send('Loading...')
 		client.load_extension(f'cog.{ext}')
 		await msg.edit(content='Loaded Sucessful')
@@ -41,7 +41,7 @@ async def load(ctx, ext):
 
 @client.command()
 async def reload(ctx, ext):
-	if ctx.message.author.id == '745187705075531778':
+	if ctx.author.id == 745187705075531778:
 		msg = await ctx.send('Reloading...')
 		client.reload_extension(f'cog.{ext}')
 		await msg.edit(content='Reloaded Sucessful')
@@ -52,7 +52,7 @@ async def reload(ctx, ext):
 
 @client.command()
 async def unload(ctx, ext):
-	if ctx.message.author.id == '745187705075531778':
+	if ctx.author.id == 745187705075531778:
 		msg = await ctx.send('Unloading...')
 		client.unload_extension(f'cog.{ext}')
 		await msg.edit(content='Unloaded!')
@@ -60,6 +60,11 @@ async def unload(ctx, ext):
 		print('unload')
 	else:
 		await ctx.send('請勿操作核心！')
+
+@client.event
+async def on_error(ctx, error):
+	print(error)
+	ctx.send(error)
 
 for filename in listdir('./cog'):
 	if filename.endswith('.py'):
