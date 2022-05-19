@@ -5,8 +5,9 @@
 
 <h2 align="center"><strong>環境　//　Environment</strong></h2>
 
-- [Python 3.9.10](https://www.python.org/downloads/release/python-3910/)
+- [Python 3.9.13](https://www.python.org/downloads/release/python-3913/)
 - [Pycord](https://pycord.dev/)
+- [python-dotenv](https://pypi.org/project/python-dotenv/)
 
 ***
 
