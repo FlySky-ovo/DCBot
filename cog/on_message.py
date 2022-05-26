@@ -9,10 +9,7 @@ class OnMessage(Cog_Ext):
 	async def on_message(self, msg):
 
 		if msg.startswith('幹') or msg.endswith('幹'):
-			await msg.channel.send('很兇誒...')
-
-		elif msg.startswith('早安') or msg.endswith('早安'):
-			await msg.channel.send('早安')
+			await msg.channel.send('兇殺小 誰說你可以兇的')
 
 def setup(client):
 	client.add_cog(OnMessage(client))
